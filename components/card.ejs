@@ -1,0 +1,20 @@
+<%
+    const _UID   = Math.trunc(Math.random() * 999999999);
+    const _likes = Math.trunc(Math.random() * 999);
+%>
+<div class="card select-none bg-white rounded-xl h-80 grow-0 p-8 flex flex-col justify-between gap-4">
+    <div class="space-y-4">
+        <div class="flex justify-between items-center w-full">
+            <h2 class="text-xl text-gray-800 font-bold">Card title</h2>
+            <div class="text-sm text-gray-300">#<%= _UID %></div>
+        </div>
+        <p class="text-gray-500 leading-6">lorem ipsum dolor sit amet consectetur adipisicing elit Eos vitae minus corrupti natus fuga nisi inventore</p>
+    </div>
+    <div class="flex gap-2 items-center">
+        <button class="rounded-lg bg-indigo-500 text-white py-2 px-4">More</button>
+        <button class="rounded-lg bg-gray-100 py-2 px-4 flex items-center">
+            <%- include("./icon", {icon: "like", class: "text-rose-600 w-5"}) %>
+            <div class="text-gray-800 font-medium">+<%= _likes %></div>
+        </button>
+    </div>
+</div>

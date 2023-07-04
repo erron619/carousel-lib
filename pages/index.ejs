@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./../components/html_head") %>
+<body>
+    <div class="w-full h-screen bg-indigo-500 flex justify-center items-center overflow-hidden">
+        <div id="carousel" class="w-1/2">
+            <% for( let i = 0; i < 9; i++ ) { %>
+                <%- include("./../components/card") %>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
